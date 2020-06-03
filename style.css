@@ -1,0 +1,57 @@
+* {
+  font-family: Roboto;
+}
+
+html {
+  font-size: 1.3rem;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #ddd;
+}
+
+@media (max-width: 991px) {
+  html {
+      font-size: 1.1rem;
+  }
+  .row > .col {
+      margin-top: 10px;
+  }
+  .button-wrapper {
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .button-wrapper > button {
+      margin: 1px 0;
+  }
+}
+
+.row {
+  margin-top: 20px;
+}
+
+.data-container {
+  width: 600px;
+  height: 384px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.block-merge-sort {
+  width: 28px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #58b7ff;
+  transition: 0.2s all ease;
+}
+
+.block-merge-sort__id {
+  position: absolute;
+  top: -24px;
+  width: 100%;
+  text-align: center;
+}

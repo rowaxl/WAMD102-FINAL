@@ -3,10 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>WAMD102 Final</title>
 </head>
 <body>
-  <h2>Hello world</h2>
+  <div class="container">
+    <div class="row">
+        <div class="col"> 
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">WAMD102 Final Project</h5>
+              <h5>Overview</h5>
+              <p>Introduce Sorting methods and visualize it</p>
+              <h5>Member</h5>
+              <ul>
+                <li>Ajay</li>
+                <li>Li Min</li>
+                <li>Wonjae</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col"> 
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Merge Sort</h5>
+              <h6 class="card-subtitle text-muted">Split array in to a half and sort each half by recursively, and merge all sub arrays with sorted</h6>
+
+              <br>
+              <h5>Code</h5>
+              <iframe height="400px" width="100%" src="https://repl.it/@rowaxl/MergeSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+              <h5>Visualization</h5>
+              <button id="btn-start-merge-sort" class="btn btn-success active">Start</button>
+              <section id="container-merge-sort" class="data-container"></section>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col"> 
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">XXX Sort</h5>
+              <h6 class="card-subtitle text-muted">Split array in to a half and sort each half by recursively, and merge it</h6>
+
+              <br>
+              <h5>Code</h5>
+              <iframe height="400px" width="100%" src="" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+              <h5>Visualization</h5>
+              <button class="btn btn-success active">Start</button>
+              <section id="container-xxx-sort" class="data-container"></section>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <script src="index.js"></script>
 </body>
 </html>
