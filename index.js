@@ -46,11 +46,14 @@ function swap(el1, el2) {
   });
 }
 
-async function doMergeSort(delay = 100) {
-  document.getElementById('btn-start-merge-sort').removeEventListener('click', doMergeSort);
+async function animateMergeSort(delay = 100) {
+  document.getElementById('btn-start-merge-sort').removeEventListener('click', animateMergeSort);
 
   let blocks = document.querySelectorAll(".block-merge-sort");
-  // TODO: Replace with merge sort.
+
+  // for (let i = 0; i < blocks.length; i++) {
+    
+  // }
   // for (let i = 0; i < blocks.length - 1; i += 1) {
   //   for (let j = 0; j < blocks.length - i - 1; j += 1) {
   //     blocks[j].style.backgroundColor = "#FF4949";
@@ -80,5 +83,5 @@ async function doMergeSort(delay = 100) {
 
 (function () {
   generateMergeSortBlocks(generateRandomNumbers());
-  document.getElementById('btn-start-merge-sort').addEventListener('click', doMergeSort);
+  document.getElementById('btn-start-merge-sort').addEventListener('click', animateMergeSort);
 })()

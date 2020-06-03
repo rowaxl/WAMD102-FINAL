@@ -9,6 +9,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>WAMD102 Final</title>
@@ -69,15 +71,53 @@
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">Merge Sort</h5>
-              <h6 class="card-subtitle text-muted">Split array in to a half and sort each half by recursively, and merge all sub arrays with sorted</h6>
+              <div class="card-supporting-text">
+                <h5>Overview</h5>
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="badge badge-primary">1</span>Break array into the two parts until it has only a single element.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">2</span>Merge contiguous sub-arrays with sorting elements.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span>Return whole marged array.</li>
+                </ul>
+              </div>
 
-              <br>
-              <h5>Code</h5>
-              <iframe height="400px" width="100%" src="https://repl.it/@rowaxl/MergeSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+              <div class="dropdown-divider"></div>
 
-              <h5>Visualization</h5>
-              <button id="btn-start-merge-sort" class="btn btn-success active">Start</button>
-              <section id="container-merge-sort" class="data-container"></section>
+              <div class="card-supporting-text">
+                <h5>Sepcification</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Best case in time</th>
+                      <th scope="col">Worst case in time</th>
+                      <th scope="col">Average case in time</th>
+                      <th scope="col">Space complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\[O(n \log n)\]</td>
+                      <td>\[O(n \log n)\]</td>
+                      <td>\[O(n \log n)\]</td>
+                      <td>\[O(1)\]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="card-supporting-text">
+                <h5>Code</h5>
+                <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/MergeSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="card-supporting-text">
+                <h5>Visualization</h5>
+                <button id="btn-start-merge-sort" class="btn btn-success active">Start</button>
+                <section id="container-merge-sort" class="data-container"></section>
+              </div>
             </div>
         </div>
       </div>
