@@ -1,8 +1,8 @@
 # Final project for WAMD102
 ## Member
-- Ajay
-- Limin
-- Wonjae
+- Ajay (Selection Sort, Quick Sort)
+- Li Min (Insertion Sort, Bubble Sort)
+- Wonjae (Design, Merge Sort)
 
 ## Overview
 Introduce sorting methods and visualize by real code.
