@@ -44,9 +44,11 @@
               <div class="card-supporting-text">
                 <h5>Overview</h5>
                 <ul class="list-group">
-                  <li class="list-group-item"><span class="badge badge-primary">1</span></li>
-                  <li class="list-group-item"><span class="badge badge-primary">2</span></li>
-                  <li class="list-group-item"><span class="badge badge-primary">3</span></li>
+                  <li class="list-group-item"><span class="badge badge-primary">1</span>Set a marker for the sorted section after the first number in the list.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">2</span>Select the first unsorted number.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span>Swap this number to the left until it arrives at the correct sorted position</li>
+                  <li class="list-group-item"><span class="badge badge-primary">4</span>Advance the marker to the right one position</li>
+                  <li class="list-group-item"><span class="badge badge-primary">5</span>Repeat steps 2 through 4 until the unsorted section is empty</li>
                 </ul>
               </div>
 
@@ -79,6 +81,56 @@
               <br>
               <h5>Code</h5>
               <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/InsertionSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col"> 
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Selection Sort</h5>
+              <div class="card-supporting-text">
+                <h5>Overview</h5>
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="badge badge-primary">1</span>Set a marker for the unsorted section at the front of the list.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">2</span>Compare all unsorted numbers in order to select the smallest one.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span>Advance the marker to the right one position.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">4</span>Swap this number with the first number in the unsorted section.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">5</span>Repeat steps 2 - 4 until one number remains in the unsorted section.</li>
+                </ul>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="card-supporting-text">
+                <h5>Sepcification</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Best case in time</th>
+                      <th scope="col">Worst case in time</th>
+                      <th scope="col">Average case in time</th>
+                      <th scope="col">Space complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(1)\]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <br>
+              <h5>Code</h5>
+              <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/SelectionSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </div>
         </div>
       </div>
@@ -142,14 +194,68 @@
     <div class="row">
       <div class="col"> 
         <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Merge Sort</h5>
+            <div class="card-supporting-text">
+              <h5>Overview</h5>
+              <ul class="list-group">
+                <li class="list-group-item"><span class="badge badge-primary">1</span>Break array into the two parts until it has only a single element.</li>
+                <li class="list-group-item"><span class="badge badge-primary">2</span>Merge contiguous sub-arrays with sorting elements.</li>
+                <li class="list-group-item"><span class="badge badge-primary">3</span>Continue step 2 while all subarrays merged.</li>
+              </ul>
+            </div>
+
+            <div class="dropdown-divider"></div>
+
+            <div class="card-supporting-text">
+              <h5>Sepcification</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Best case in time</th>
+                    <th scope="col">Worst case in time</th>
+                    <th scope="col">Average case in time</th>
+                    <th scope="col">Space complexity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>\[O(n \log n)\]</td>
+                    <td>\[O(n \log n)\]</td>
+                    <td>\[O(n \log n)\]</td>
+                    <td>\[O(1)\]</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="dropdown-divider"></div>
+
+            <div class="card-supporting-text">
+              <h5>Code</h5>
+              <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/MergeSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col"> 
+        <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Merge Sort</h5>
+              <h5 class="card-title">Quick Sort</h5>
               <div class="card-supporting-text">
                 <h5>Overview</h5>
                 <ul class="list-group">
-                  <li class="list-group-item"><span class="badge badge-primary">1</span>Break array into the two parts until it has only a single element.</li>
-                  <li class="list-group-item"><span class="badge badge-primary">2</span>Merge contiguous sub-arrays with sorting elements.</li>
-                  <li class="list-group-item"><span class="badge badge-primary">3</span>Continue step 2 while all subarrays merged.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">1</span>Find a <b>pivot</b> item in the array.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">2</span>Start a pointer (the left pointer) at the first item in the array.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span>Start a pointer (the right pointer) at the last item in the array.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">4</span>While the left value is less than the pivot value, move the left pointer to the right.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">5</span>While the right value is greater than the pivot value, move the right pointer to the left</li>
+                  <li class="list-group-item"><span class="badge badge-primary">6</span>If the left pointer <= the right pointer, then swap the values at these locations in the array.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">7</span>Move the left pointer to the right by one and the right pointer to the left by one.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">8</span>If the left pointer and right pointer don’t meet, go to step 1.</li>
                 </ul>
               </div>
 
@@ -168,10 +274,10 @@
                   </thead>
                   <tbody>
                     <tr>
+                      <td>\[O(n^2)\]</td>
                       <td>\[O(n \log n)\]</td>
                       <td>\[O(n \log n)\]</td>
-                      <td>\[O(n \log n)\]</td>
-                      <td>\[O(1)\]</td>
+                      <td>\[O(\log n)\]</td>
                     </tr>
                   </tbody>
                 </table>
@@ -179,18 +285,9 @@
 
               <div class="dropdown-divider"></div>
 
-              <div class="card-supporting-text">
-                <h5>Code</h5>
-                <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/MergeSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-              </div>
-
-              <div class="dropdown-divider"></div>
-
-              <div class="card-supporting-text">
-                <h5>Visualization</h5>
-                <button id="btn-start-merge-sort" class="btn btn-success active">Start</button>
-                <section id="container-merge-sort" class="data-container"></section>
-              </div>
+              <br>
+              <h5>Code</h5>
+              <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/QuickSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </div>
         </div>
       </div>

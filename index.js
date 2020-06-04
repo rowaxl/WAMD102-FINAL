@@ -1,4 +1,3 @@
-
 const generateRandomNumbers = (length = 20) => {
   const res = [];
   while (res.length < length) {
@@ -48,17 +47,6 @@ function swap(board, el1, el2) {
   });
 }
 
-async function animateMergeSort(delay = 100) {
-  document.getElementById('btn-start-merge-sort').removeEventListener('click', animateMergeSort);
-
-  let blocks = document.querySelectorAll(".block-merge-sort");
-
-  // for (let i = 0; i < blocks.length; i++) {
-    
-  // }
-  
-}
-
 const animateBubbleSort = async (delay = 200) => {
   document.getElementById('btn-start-bubble-sort').removeEventListener('click', animateBubbleSort);
   let blocks = document.querySelectorAll(".block-bubble-sort");
@@ -92,9 +80,6 @@ const animateBubbleSort = async (delay = 200) => {
 }
 
 (function () {
-  generateBlocks('merge');
-  document.getElementById('btn-start-merge-sort').addEventListener('click', animateMergeSort);
-  
   generateBlocks('bubble');
   document.getElementById('btn-start-bubble-sort').addEventListener('click', animateBubbleSort);
 })()
