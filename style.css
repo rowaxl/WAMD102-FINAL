@@ -61,3 +61,7 @@ body {
 .card-body {
   background: #ddd;
 }
+
+.badge {
+  font-size: 1.3em !important;
+}
