@@ -16,5 +16,6 @@ function bubbleSort(array) {
   return array;
 }
 
-bubbleSort(numbers);
-console.log(numbers);
+console.log('before', numbers);
+
+console.log('after ', bubbleSort(numbers));
