@@ -82,4 +82,16 @@ const animateBubbleSort = async (delay = 200) => {
 (function () {
   generateBlocks('bubble');
   document.getElementById('btn-start-bubble-sort').addEventListener('click', animateBubbleSort);
+
+  const scrollButtons = document.querySelectorAll('.btn-scroll');
+  scrollButtons.forEach(button => {
+    const direction = button.getAttribute('data-link-goto');
+    const target = document.getElementById('a-' + direction);
+
+    button.addEventListener('click', () => {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.pageYOffset
+      });
+    });
+  })
 })()
