@@ -1,20 +1,3 @@
-const generateMergeSortBlocks = (numbers = []) => {
-  for (let i = 0; i < numbers.length; i += 1) {
-    const value = numbers[i];
-
-    const block = document.createElement("div");
-    block.classList.add("block-merge-sort");
-    block.style.height = `${value * 3}px`;
-    block.style.transform = `translateX(${i * 30}px)`;
-
-    const blockLabel = document.createElement("label");
-    blockLabel.classList.add("block-merge-sort__id");
-    blockLabel.innerHTML = value;
-
-    block.appendChild(blockLabel);
-    document.getElementById("container-merge-sort").appendChild(block);
-  }
-}
 
 const generateRandomNumbers = (length = 20) => {
   const res = [];
@@ -25,7 +8,26 @@ const generateRandomNumbers = (length = 20) => {
   return res;
 }
 
-function swap(el1, el2) {
+const generateBlocks = (method = 'bubble') => {
+  const numbers = generateRandomNumbers();
+  for (let i = 0; i < numbers.length; i += 1) {
+    const value = numbers[i];
+
+    const block = document.createElement("div");
+    block.classList.add(`block-${method}-sort`);
+    block.style.height = `${value * 3}px`;
+    block.style.transform = `translateX(${i * 30}px)`;
+
+    const blockLabel = document.createElement("label");
+    blockLabel.classList.add(`block-${method}-sort__id`);
+    blockLabel.innerHTML = value;
+
+    block.appendChild(blockLabel);
+    document.getElementById(`container-${method}-sort`).appendChild(block);
+  }
+}
+
+function swap(board, el1, el2) {
   return new Promise(resolve => {
     const style1 = window.getComputedStyle(el1);
     const style2 = window.getComputedStyle(el2);
@@ -39,7 +41,7 @@ function swap(el1, el2) {
     // Wait for the transition to end!
     window.requestAnimationFrame(function() {
       setTimeout(() => {
-        document.getElementById("container-merge-sort").insertBefore(el2, el1);
+        board.insertBefore(el2, el1);
         resolve();
       }, 250);
     });
@@ -54,34 +56,45 @@ async function animateMergeSort(delay = 100) {
   // for (let i = 0; i < blocks.length; i++) {
     
   // }
-  // for (let i = 0; i < blocks.length - 1; i += 1) {
-  //   for (let j = 0; j < blocks.length - i - 1; j += 1) {
-  //     blocks[j].style.backgroundColor = "#FF4949";
-  //     blocks[j + 1].style.backgroundColor = "#FF4949";
+  
+}
 
-  //     await new Promise(resolve =>
-  //       setTimeout(() => {
-  //         resolve();
-  //       }, delay)
-  //     );
+const animateBubbleSort = async (delay = 200) => {
+  document.getElementById('btn-start-bubble-sort').removeEventListener('click', animateBubbleSort);
+  let blocks = document.querySelectorAll(".block-bubble-sort");
+  let board = document.getElementById("container-bubble-sort");
 
-  //     const value1 = Number(blocks[j].childNodes[0].innerHTML);
-  //     const value2 = Number(blocks[j + 1].childNodes[0].innerHTML);
+  for (let i = 0; i < blocks.length - 1; i += 1) {
+    for (let j = 0; j < blocks.length - i - 1; j += 1) {
+      blocks[j].style.backgroundColor = "#FF4949";
+      blocks[j + 1].style.backgroundColor = "#FF4949";
 
-  //     if (value1 > value2) {
-  //       await swap(blocks[j], blocks[j + 1]);
-  //       blocks = document.querySelectorAll(".block-merge-sort");
-  //     }
+      await new Promise(resolve =>
+        setTimeout(() => {
+          resolve();
+        }, delay)
+      );
 
-  //     blocks[j].style.backgroundColor = "#58B7FF";
-  //     blocks[j + 1].style.backgroundColor = "#58B7FF";
-  //   }
+      const value1 = Number(blocks[j].childNodes[0].innerHTML);
+      const value2 = Number(blocks[j + 1].childNodes[0].innerHTML);
 
-  //   blocks[blocks.length - i - 1].style.backgroundColor = "#13CE66";
-  // }
+      if (value1 > value2) {
+        await swap(board, blocks[j], blocks[j + 1]);
+        blocks = document.querySelectorAll(".block-bubble-sort");
+      }
+
+      blocks[j].style.backgroundColor = "#58B7FF";
+      blocks[j + 1].style.backgroundColor = "#58B7FF";
+    }
+
+    blocks[blocks.length - i - 1].style.backgroundColor = "#13CE66";
+  }
 }
 
 (function () {
-  generateMergeSortBlocks(generateRandomNumbers());
+  generateBlocks('merge');
   document.getElementById('btn-start-merge-sort').addEventListener('click', animateMergeSort);
+  
+  generateBlocks('bubble');
+  document.getElementById('btn-start-bubble-sort').addEventListener('click', animateBubbleSort);
 })()

@@ -40,7 +40,8 @@ body {
   margin: 0 auto;
 }
 
-.block-merge-sort {
+.block-merge-sort,
+.block-bubble-sort {
   width: 28px;
   position: absolute;
   left: 0;
@@ -49,7 +50,8 @@ body {
   transition: 0.2s all ease;
 }
 
-.block-merge-sort__id {
+.block-merge-sort__id,
+.block-bubble-sort__id {
   position: absolute;
   top: -24px;
   width: 100%;
