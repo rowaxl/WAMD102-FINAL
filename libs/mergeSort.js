@@ -37,5 +37,3 @@ function mergeSort(numbers) {
   // sort and merge the elements recursively
   return merge(mergeSort(left), mergeSort(right));
 }
-
-module.exports = { mergeSort };
