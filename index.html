@@ -41,7 +41,40 @@
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">Insertion Sort</h5>
-              <h6 class="card-subtitle text-muted">Split array in to a half and sort each half by recursively, and merge all sub arrays with sorted</h6>
+              <div class="card-supporting-text">
+                <h5>Overview</h5>
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="badge badge-primary">1</span></li>
+                  <li class="list-group-item"><span class="badge badge-primary">2</span></li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="card-supporting-text">
+                <h5>Sepcification</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Best case in time</th>
+                      <th scope="col">Worst case in time</th>
+                      <th scope="col">Average case in time</th>
+                      <th scope="col">Space complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\[O(n)\]</td>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(1)\]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="dropdown-divider"></div>
 
               <br>
               <h5>Code</h5>
@@ -56,9 +89,40 @@
         <div class="card">
             <div class="card-body">
               <h5 class="card-title">Bubble Sort</h5>
-              <h6 class="card-subtitle text-muted">Split array in to a half and sort each half by recursively, and merge all sub arrays with sorted</h6>
+              <div class="card-supporting-text">
+                <h5>Overview</h5>
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="badge badge-primary">1</span>Starting with the first element(index = 0), compare the current element with the next element of the array.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">2</span>If the current element is greater than the next element of the array, swap them.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span>If the current element is less than the next element, move to the next element.<b> Repeat Step 1.</b></li>
+                </ul>
+              </div>
 
-              <br>
+              <div class="dropdown-divider"></div>
+
+              <div class="card-supporting-text">
+                <h5>Sepcification</h5>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Best case in time</th>
+                      <th scope="col">Worst case in time</th>
+                      <th scope="col">Average case in time</th>
+                      <th scope="col">Space complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>\[O(n)\]</td>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(n^2)\]</td>
+                      <td>\[O(1)\]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="dropdown-divider"></div>
               <h5>Code</h5>
               <iframe height="600px" width="100%" src="https://repl.it/@rowaxl/BubbleSort?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </div>
@@ -76,7 +140,7 @@
                 <ul class="list-group">
                   <li class="list-group-item"><span class="badge badge-primary">1</span>Break array into the two parts until it has only a single element.</li>
                   <li class="list-group-item"><span class="badge badge-primary">2</span>Merge contiguous sub-arrays with sorting elements.</li>
-                  <li class="list-group-item"><span class="badge badge-primary">3</span>Return whole marged array.</li>
+                  <li class="list-group-item"><span class="badge badge-primary">3</span>Continue step 2 while all subarrays merged.</li>
                 </ul>
               </div>
 
