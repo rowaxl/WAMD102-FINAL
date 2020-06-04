@@ -15,4 +15,6 @@ const insertionSort = (array) => {
     return array;
 };
 
-console.log(insertionSort(numbers));
+console.log('before', numbers)
+
+console.log('after', insertionSort(numbers));
