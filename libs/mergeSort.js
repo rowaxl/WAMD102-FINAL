@@ -4,11 +4,9 @@ function merge(left, right) {
   // compare elements of two arrays in same index (do while left.length == right.length)
   while (left.length && right.length) {
     if (left[0] <= right[0]) {
-      merged.push(left[0]);
-      left.shift();
+      merged.push(left.shift());
     } else {
-      merged.push(right[0]);
-      right.shift();
+      merged.push(right.shift());
     }
   }
 

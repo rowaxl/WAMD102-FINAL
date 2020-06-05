@@ -72,3 +72,11 @@ body {
   bottom: 5%;
   right: 5%;
 }
+
+.img_icon {
+  width: 24px;
+}
+
+.profile_photo {
+  width: 100%;
+}
